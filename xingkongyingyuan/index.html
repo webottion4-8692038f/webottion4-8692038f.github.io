@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>星空影院-在线观影指南_高清影视资源_热门剧集推荐</title>
+<meta name="description" content="星空影院是在线观影内容聚合指南，围绕高清影视资源、热门剧集与电影推荐展开，梳理星空影院可看内容类型、更新节奏、追剧顺序与选片思路，帮助观众快速找到合适片单，适合收藏与继续浏览。">
+<meta name="keywords" content="星空影院,星空影院在线观影,高清影视资源,热门剧集推荐,星空影院片单">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b1f3b'/%3E%3Ccircle cx='32' cy='26' r='9' fill='%23ffd166'/%3E%3Cpath d='M8 52l14-14 10 10 8-8 16 16z' fill='%237bd1c9'/%3E%3C/svg%3E">
+<style>
+:root{
+--xk-bg:#0e1226;
+--xk-bg2:#141a35;
+--xk-card:#1b2242;
+--xk-card2:#222a52;
+--xk-line:rgba(255,255,255,.09);
+--xk-txt:#e8ecf8;
+--xk-sub:#a4adc9;
+--xk-main:#ffd166;
+--xk-main2:#7bd1c9;
+--xk-hot:#ff7b8a;
+--xk-radius:16px;
+--xk-shadow:0 10px 28px rgba(0,0,0,.32);
+--xk-max:1200px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+background:radial-gradient(1200px 600px at 15% -10%,#1d2752 0%,transparent 60%),radial-gradient(900px 500px at 90% 0%,#232a55 0%,transparent 55%),var(--xk-bg);
+color:var(--xk-txt);
+font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,-apple-system,sans-serif;
+font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+.xk-wrap{max-width:var(--xk-max);margin:0 auto;padding:0 18px}
+.xk-sec{padding:38px 0}
+.xk-sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:18px;flex-wrap:wrap}
+.xk-sec-head h2{font-size:22px;margin:0;letter-spacing:.5px;position:relative;padding-left:14px}
+.xk-sec-head h2::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:5px;border-radius:4px;background:linear-gradient(180deg,var(--xk-main),var(--xk-main2))}
+.xk-sec-head p{margin:0;color:var(--xk-sub);font-size:13px}
+.xk-more{font-size:13px;color:var(--xk-main2);border:1px solid var(--xk-line);padding:6px 14px;border-radius:999px;transition:.25s}
+.xk-more:hover{background:rgba(123,209,201,.12);transform:translateY(-1px)}
+
+/* nav */
+.xk-nav{position:sticky;top:0;z-index:60;background:rgba(12,16,34,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--xk-line)}
+.xk-nav-in{max-width:var(--xk-max);margin:0 auto;padding:12px 18px;display:flex;align-items:center;gap:18px}
+.xk-logo{display:flex;align-items:center;gap:9px;font-weight:700;font-size:18px;letter-spacing:1px;white-space:nowrap}
+.xk-logo-mark{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--xk-main),var(--xk-main2));display:grid;place-items:center;color:#101428;font-size:15px;font-weight:800}
+.xk-nav-links{display:flex;gap:4px;flex:1;overflow-x:auto;scrollbar-width:none}
+.xk-nav-links::-webkit-scrollbar{display:none}
+.xk-nav-links a{font-size:13.5px;color:var(--xk-sub);padding:7px 11px;border-radius:9px;white-space:nowrap;transition:.2s}
+.xk-nav-links a:hover{color:var(--xk-txt);background:rgba(255,255,255,.06)}
+.xk-nav-cta{background:linear-gradient(135deg,var(--xk-main),#ffb84d);color:#161a2e;font-size:13px;font-weight:700;padding:8px 16px;border-radius:999px;white-space:nowrap}
+
+/* banner */
+.xk-banner{padding:52px 0 40px;position:relative;overflow:hidden}
+.xk-banner::after{content:"";position:absolute;right:-120px;top:-90px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(123,209,201,.18),transparent 70%);pointer-events:none}
+.xk-banner-in{display:grid;grid-template-columns:1.15fr .85fr;gap:38px;align-items:center;position:relative;z-index:2}
+.xk-badge{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;color:var(--xk-main);border:1px solid rgba(255,209,102,.35);background:rgba(255,209,102,.09);padding:5px 13px;border-radius:999px;margin-bottom:16px}
+.xk-h1{font-size:38px;line-height:1.28;margin:0 0 16px;letter-spacing:.5px}
+.xk-h1 em{font-style:normal;background:linear-gradient(120deg,var(--xk-main),var(--xk-main2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.xk-banner-txt p{color:var(--xk-sub);margin:0 0 8px;font-size:14.5px}
+.xk-search{display:flex;gap:8px;margin:20px 0 16px;max-width:520px}
+.xk-search input{flex:1;background:rgba(255,255,255,.06);border:1px solid var(--xk-line);border-radius:12px;padding:12px 16px;color:var(--xk-txt);font-size:14px;outline:none;transition:.2s}
+.xk-search input:focus{border-color:rgba(123,209,201,.55);background:rgba(255,255,255,.09)}
+.xk-search button{background:linear-gradient(135deg,var(--xk-main),#ffb84d);border:0;color:#161a2e;font-weight:700;padding:0 22px;border-radius:12px;cursor:pointer;font-size:14px}
+.xk-quick{display:flex;flex-wrap:wrap;gap:8px}
+.xk-quick a{font-size:13px;color:var(--xk-sub);border:1px solid var(--xk-line);padding:6px 13px;border-radius:999px;transition:.2s}
+.xk-quick a:hover{color:var(--xk-main);border-color:rgba(255,209,102,.45);transform:translateY(-1px)}
+.xk-poster{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.xk-poster-item{border-radius:14px;height:118px;position:relative;overflow:hidden;border:1px solid var(--xk-line);box-shadow:var(--xk-shadow);transition:.28s}
+.xk-poster-item:hover{transform:translateY(-4px)}
+.xk-poster-item span{position:absolute;left:10px;bottom:8px;font-size:12.5px;font-weight:600;text-shadow:0 2px 8px #000}
+.xk-poster-item:nth-child(1){background:linear-gradient(135deg,#33407a,#7b5ea7)}
+.xk-poster-item:nth-child(2){background:linear-gradient(135deg,#1f4d63,#3f8a7f)}
+.xk-poster-item:nth-child(3){background:linear-gradient(135deg,#5b2f4a,#a34f6d)}
+.xk-poster-item:nth-child(4){background:linear-gradient(135deg,#2e4a2f,#7d9a3f)}
+.xk-poster-item:nth-child(5){background:linear-gradient(135deg,#3a3560,#6f5fbf)}
+.xk-poster-item:nth-child(6){background:linear-gradient(135deg,#5f4423,#b07a3a)}
+
+/* cards */
+.xk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.xk-card{background:linear-gradient(180deg,var(--xk-card),var(--xk-bg2));border:1px solid var(--xk-line);border-radius:var(--xk-radius);padding:18px;box-shadow:var(--xk-shadow);transition:.28s;display:flex;flex-direction:column;gap:10px}
+.xk-card:hover{transform:translateY(-4px);border-color:rgba(123,209,201,.35)}
+.xk-card h3{margin:0;font-size:16px;line-height:1.5}
+.xk-tags{display:flex;flex-wrap:wrap;gap:6px}
+.xk-tag{font-size:11.5px;color:var(--xk-main2);background:rgba(123,209,201,.1);border:1px solid rgba(123,209,201,.22);border-radius:6px;padding:2px 8px}
+.xk-tag.gold{color:var(--xk-main);background:rgba(255,209,102,.1);border-color:rgba(255,209,102,.25)}
+.xk-tag.hot{color:var(--xk-hot);background:rgba(255,123,138,.1);border-color:rgba(255,123,138,.25)}
+.xk-card p{margin:0;color:var(--xk-sub);font-size:13.5px;flex:1}
+.xk-card-meta{display:flex;justify-content:space-between;font-size:12px;color:var(--xk-sub);border-top:1px dashed var(--xk-line);padding-top:9px}
+.xk-score{color:var(--xk-main);font-weight:700}
+
+/* list */
+.xk-list{display:grid;gap:10px}
+.xk-list-item{display:grid;grid-template-columns:56px 1fr auto;gap:14px;align-items:center;background:rgba(255,255,255,.03);border:1px solid var(--xk-line);border-radius:12px;padding:12px 16px;transition:.22s}
+.xk-list-item:hover{background:rgba(255,255,255,.06);transform:translateX(3px)}
+.xk-list-idx{font-size:17px;font-weight:800;color:transparent;background:linear-gradient(135deg,var(--xk-main),var(--xk-main2));-webkit-background-clip:text;background-clip:text}
+.xk-list-item h4{margin:0 0 3px;font-size:14.5px}
+.xk-list-item small{color:var(--xk-sub);font-size:12.5px}
+.xk-list-time{font-size:12px;color:var(--xk-sub);white-space:nowrap}
+
+/* cats */
+.xk-cats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.xk-cat{background:linear-gradient(135deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid var(--xk-line);border-radius:14px;padding:16px;transition:.26s}
+.xk-cat:hover{transform:translateY(-3px);border-color:rgba(255,209,102,.4)}
+.xk-cat strong{display:block;font-size:15px;margin-bottom:5px}
+.xk-cat small{color:var(--xk-sub);font-size:12.5px}
+
+/* article */
+.xk-article{background:linear-gradient(180deg,var(--xk-card),var(--xk-bg2));border:1px solid var(--xk-line);border-radius:var(--xk-radius);padding:30px;box-shadow:var(--xk-shadow)}
+.xk-article h2{font-size:22px;margin:0 0 16px}
+.xk-article h3{font-size:16.5px;margin:24px 0 10px;color:var(--xk-main)}
+.xk-article p{margin:0 0 14px;color:#c8d0e6;font-size:14.6px;line-height:1.95}
+.xk-article .xk-note{background:rgba(123,209,201,.07);border-left:3px solid var(--xk-main2);padding:14px 16px;border-radius:0 10px 10px 0;color:#cdd6ea;font-size:14px;margin:18px 0}
+
+/* guide */
+.xk-guide{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.xk-guide-item{background:rgba(255,255,255,.035);border:1px solid var(--xk-line);border-radius:14px;padding:18px}
+.xk-guide-item h4{margin:0 0 8px;font-size:15px;color:var(--xk-main2)}
+.xk-guide-item p{margin:0;font-size:13.5px;color:var(--xk-sub)}
+
+/* faq */
+.xk-faq{display:grid;gap:10px}
+.xk-faq details{background:rgba(255,255,255,.035);border:1px solid var(--xk-line);border-radius:12px;padding:14px 18px;transition:.2s}
+.xk-faq details[open]{border-color:rgba(255,209,102,.35);background:rgba(255,209,102,.05)}
+.xk-faq summary{cursor:pointer;font-size:14.5px;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.xk-faq summary::-webkit-details-marker{display:none}
+.xk-faq summary::after{content:"+";color:var(--xk-main);font-weight:700;font-size:17px}
+.xk-faq details[open] summary::after{content:"−"}
+.xk-faq p{margin:10px 0 0;color:var(--xk-sub);font-size:13.8px;line-height:1.85}
+
+/* comments */
+.xk-cmts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.xk-cmt{background:rgba(255,255,255,.035);border:1px solid var(--xk-line);border-radius:12px;padding:14px 16px}
+.xk-cmt-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:7px}
+.xk-cmt-name{font-size:13.5px;font-weight:600;color:var(--xk-main2)}
+.xk-cmt-time{font-size:11.5px;color:var(--xk-sub)}
+.xk-cmt p{margin:0;font-size:13.5px;color:#c3ccdf}
+
+/* news */
+.xk-news{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.xk-news-item{background:linear-gradient(180deg,var(--xk-card),var(--xk-bg2));border:1px solid var(--xk-line);border-radius:14px;padding:18px;transition:.25s}
+.xk-news-item:hover{transform:translateY(-3px);border-color:rgba(123,209,201,.32)}
+.xk-news-item h4{margin:0 0 8px;font-size:15px;line-height:1.55}
+.xk-news-item p{margin:0 0 10px;font-size:13.2px;color:var(--xk-sub)}
+.xk-news-date{font-size:11.5px;color:var(--xk-main);border:1px solid rgba(255,209,102,.28);padding:2px 9px;border-radius:999px}
+
+/* footer */
+.xk-footer{margin-top:20px;border-top:1px solid var(--xk-line);background:rgba(8,11,24,.6);padding:36px 0 26px}
+.xk-foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:22px;margin-bottom:24px}
+.xk-foot-grid h5{margin:0 0 10px;font-size:14px;color:var(--xk-txt)}
+.xk-foot-grid a{display:block;font-size:13px;color:var(--xk-sub);margin-bottom:6px}
+.xk-foot-grid a:hover{color:var(--xk-main2)}
+.xk-foot-desc{font-size:13px;color:var(--xk-sub);line-height:1.85}
+.xk-copy{border-top:1px solid var(--xk-line);padding-top:16px;font-size:12.5px;color:#7f89a6;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+
+@media (max-width:980px){
+.xk-banner-in{grid-template-columns:1fr;gap:26px}
+.xk-h1{font-size:30px}
+.xk-grid{grid-template-columns:repeat(2,1fr)}
+.xk-cats{grid-template-columns:repeat(2,1fr)}
+.xk-news{grid-template-columns:repeat(2,1fr)}
+.xk-foot-grid{grid-template-columns:1fr 1fr}
+.xk-nav-links{display:none}
+}
+@media (max-width:620px){
+.xk-h1{font-size:25px}
+.xk-grid{grid-template-columns:1fr}
+.xk-cats{grid-template-columns:1fr}
+.xk-news{grid-template-columns:1fr}
+.xk-cmts{grid-template-columns:1fr}
+.xk-guide{grid-template-columns:1fr}
+.xk-article{padding:20px}
+.xk-list-item{grid-template-columns:40px 1fr;gap:10px}
+.xk-list-time{grid-column:2;text-align:left}
+.xk-search{flex-direction:column}
+.xk-search button{padding:11px 0}
+.xk-foot-grid{grid-template-columns:1fr}
+.xk-poster{grid-template-columns:1fr 1fr}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 导航 -->
+<header class="xk-nav">
+  <div class="xk-nav-in">
+    <a class="xk-logo" href="/#xk-top">
+      <span class="xk-logo-mark">星</span>
+      <span>星空影院</span>
+    </a>
+    <nav class="xk-nav-links" aria-label="主导航">
+      <a href="/#xk-hot">热门推荐</a>
+      <a href="/#xk-update">最新更新</a>
+      <a href="/#xk-cats">片单分类</a>
+      <a href="/#xk-deep">深度解析</a>
+      <a href="/#xk-guide">观影指南</a>
+      <a href="/#xk-faq">常见问题</a>
+      <a href="/#xk-news">资讯动态</a>
+    </nav>
+    <a class="xk-nav-cta" href="/#xk-hot">开始选片</a>
+  </div>
+</header>
+
+<!-- 首屏 -->
+<section class="xk-banner" id="xk-top">
+  <div class="xk-wrap xk-banner-in">
+    <div class="xk-banner-txt">
+      <span class="xk-badge">★ 高清影视内容聚合 · 2026 持续更新</span>
+      <h1 class="xk-h1"><em>星空影院</em>在线观影指南：高清影视资源与热门剧集推荐</h1>
+      <p>星空影院围绕高清影视资源、热门剧集与院线电影整理选片思路，按类型、热度与更新节奏做分类聚合。</p>
+      <p>无论你想追一部刚开播的连续剧，还是找一部周末放松的电影，这里都能找到清晰的入口与参考。</p>
+      <form class="xk-search" onsubmit="return false;">
+        <input type="search" placeholder="搜索片名、剧集、演员或类型，如「悬疑剧」「科幻电影」">
+        <button type="submit">搜片单</button>
+      </form>
+      <div class="xk-quick">
+        <a href="/#xk-hot">高分电影</a>
+        <a href="/#xk-hot">热播剧集</a>
+        <a href="/#xk-cats">悬疑推理</a>
+        <a href="/#xk-cats">科幻奇幻</a>
+        <a href="/#xk-update">今日更新</a>
+        <a href="/#xk-guide">追剧顺序</a>
+        <a href="/#xk-news">上映资讯</a>
+        <a href="/#xk-faq">选片答疑</a>
+      </div>
+    </div>
+    <div class="xk-poster" aria-hidden="true">
+      <div class="xk-poster-item"><span>科幻 · 星际远航</span></div>
+      <div class="xk-poster-item"><span>悬疑 · 迷雾档案</span></div>
+      <div class="xk-poster-item"><span>都市 · 长夜微光</span></div>
+      <div class="xk-poster-item"><span>古装 · 山河旧梦</span></div>
+      <div class="xk-poster-item"><span>动画 · 云端旅人</span></div>
+      <div class="xk-poster-item"><span>纪录 · 山海纪行</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 内容简介 -->
+<section class="xk-sec" id="xk-intro">
+  <div class="xk-wrap">
+    <div class="xk-article">
+      <h2>星空影院是做什么的：一个偏内容消费的观影参考页</h2>
+      <p>很多人搜索「星空影院」，真正想解决的问题往往不是一句介绍，而是：有哪些值得看的内容、哪些类型更适合自己、更新节奏是否稳定、追剧应该从哪一部开始。这个页面正是围绕这些需求搭建的观影参考页，把高清影视资源、热门剧集、院线电影与类型片单放在同一套结构里，方便快速判断与浏览。</p>
+      <p>星空影院的内容组织逻辑偏「内容消费」：先看首屏热门与更新，再按分类缩小范围，最后进入深度解析与常见问题，理解某类作品为什么值得看、适合什么观众。对于偏好连续剧的观众，可以重点关注更新节奏与集数信息；对于只想周末看一部电影的观众，则更适合从高分电影与编辑推荐卡片入手。</p>
+      <p>本页提供的参考价值主要体现在三个方面：一是把类型、题材与看点拆开讲清楚，减少「点进去才发现不合口味」的试错；二是用最新更新与资讯模块提示内容动态，方便判断是否值得长期关注；三是通过问答与评论呈现真实观众视角，帮助新观众建立合理的期待值。</p>
+      <p>如果你习惯收藏一个稳定的入口页面，星空影院这类聚合页会更省事：分类入口、推荐卡片、深度解析与资讯都在同一页，移动端也能顺畅阅读。它不追求花哨，而是把「找内容、判断内容、继续浏览」这条路径做顺，因此值得加入收藏夹，隔一段时间回来看更新。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 热门推荐 -->
+<section class="xk-sec" id="xk-hot">
+  <div class="xk-wrap">
+    <div class="xk-sec-head">
+      <h2>热门推荐：本周值得打开的片单</h2>
+      <a class="xk-more" href="/#xk-update">查看全部更新</a>
+    </div>
+    <div class="xk-grid">
+      <article class="xk-card">
+        <h3>《长夜信号》</h3>
+        <div class="xk-tags"><span class="xk-tag gold">科幻悬疑</span><span class="xk-tag">连续剧</span><span class="xk-tag hot">热播</span></div>
+        <p>深空监听站收到一段重复信号，三名值班员必须在十二小时内判断它来自谁。节奏偏慢热，但信息密度高，适合喜欢推理解谜的观众。</p>
+        <div class="xk-card-meta"><span>更新至 14 集</span><span class="xk-score">8.7 分</span></div>
+      </article>
+      <article class="xk-card">
+        <h3>《雾港档案》</h3>
+        <div class="xk-tags"><span class="xk-tag gold">犯罪推理</span><span class="xk-tag">单元剧</span><span class="xk-tag">口碑</span></div>
+        <p>以港口城市为背景的单元式刑侦剧，每两集一个案件，主线暗线穿插。适合喜欢边看边猜、不爱拖沓叙事的观众。</p>
+        <div class="xk-card-meta"><span>全 24 集已完结</span><span class="xk-score">8.9 分</span></div>
+      </article>
+      <article class="xk-card">
+        <h3>《山海纪行》</h3>
+        <div class="xk-tags"><span class="xk-tag gold">人文纪录</span><span class="xk-tag">自然</span><span class="xk-tag">高清</span></div>
+        <p>沿山脉与海岸线记录普通人的四季生活，镜头克制、配乐舒服。适合睡前或周末慢慢看，也很适合与家人一起观看。</p>
+        <div class="xk-card-meta"><span>全 8 集</span><span class="xk-score">9.1 分</span></div>
+      </article>
+      <article class="xk-card">
+        <h3>《云端旅人》</h3>
+        <div class="xk-tags"><span class="xk-tag gold">动画电影</span><span class="xk-tag">治愈</span><span class="xk-tag">合家欢</span></div>
+        <p>少年与机械飞艇穿越云海的公路式冒险，画风明亮，情绪推进自然。适合想找一部轻松但不幼稚的作品的观众。</p>
+        <div class="xk-card-meta"><span>片长 108 分钟</span><span class="xk-score">8.4 分</span></div>
+      </article>
+      <article class="xk-card">
+        <h3>《山河旧梦》</h3>
+        <div class="xk-tags"><span class="xk-tag gold">古装群像</span><span class="xk-tag">权谋</span><span class="xk-tag hot">讨论度高</span></div>
+        <p>以州府治理为切口展开的群像剧，人物关系复杂但线索清楚。前六集需要耐心，进入中段后人物动机逐渐清晰。</p>
+        <div class="xk-card-meta"><span>更新至 22 集</span><span class="xk-score">8.5 分</span></div>
+      </article>
+      <article class="xk-card">
+        <h3>《轻轨以南》</h3>
+        <div class="xk-tags"><span class="xk-tag gold">都市情感</span><span class="xk-tag">生活流</span><span class="xk-tag">新剧</span></div>
+        <p>三组普通人的日常交叠在地铁沿线，台词生活化、冲突不夸张。适合喜欢细腻情绪和城市观察的观众。</p>
+        <div class="xk-card-meta"><span>更新至 9 集</span><span class="xk-score">8.2 分</span></div>
+      </article>
+      <article class="xk-card">
+        <h3>《第七码头》</h3>
+        <div class="xk-tags"><span class="xk-tag gold">动作犯罪</span><span class="xk-tag">电影</span><span class="xk-tag">爽片</span></div>
+        <p>退役潜水员被卷入走私案，节奏紧凑、动作场面干净。剧情不算复杂，但适合想找一部不费脑的周末电影。</p>
+        <div class="xk-card-meta"><span>片长 121 分钟</span><span class="xk-score">7.8 分</span></div>
+      </article>
+      <article class="xk-card">
+        <h3>《夏至电台》</h3>
+        <div class="xk-tags"><span class="xk-tag gold">青春成长</span><span class="xk-tag">校园</span><span class="xk-tag">治愈</span></div>
+        <p>校园广播站的四个人在毕业前录最后一档节目。故事不靠强冲突推进，胜在细节真实，适合怀念学生时代的观众。</p>
+        <div class="xk-card-meta"><span>全 16 集</span><span class="xk-score">8.3 分</span></div>
+      </article>
+      <article class="xk-card">
+        <h3>《深蓝回响》</h3>
+        <div class="xk-tags"><span class="xk-tag gold">自然纪录</span><span class="xk-tag">海洋</span><span class="xk-tag">高清</span></div>
+        <p>深海拍摄与声呐记录结合的纪录片，画面震撼，解说克制。适合对海洋题材感兴趣、希望看到真实影像素材的观众。</p>
+        <div class="xk-card-meta"><span>全 6 集</span><span class="xk-score">9.0 分</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 最新更新 -->
+<section class="xk-sec" id="xk-update">
+  <div class="xk-wrap">
+    <div class="xk-sec-head">
+      <h2>最新更新与热播动态</h2>
+      <p>2026 年 11 月 7 日整理</p>
+    </div>
+    <div class="xk-list">
+      <div class="xk-list-item"><span class="xk-list-idx">01</span><div><h4>《长夜信号》第 14 集上线</h4><small>主线信号源出现第二个解释，监听站内部开始互相怀疑。</small></div><span class="xk-list-time">11 月 7 日</span></div>
+      <div class="xk-list-item"><span class="xk-list-idx">02</span><div><h4>《山河旧梦》更新至 22 集</h4><small>州府线与朝堂线合流，两位主角的立场第一次正面冲突。</small></div><span class="xk-list-time">11 月 7 日</span></div>
+      <div class="xk-list-item"><span class="xk-list-idx">03</span><div><h4>《轻轨以南》第 9 集上线</h4><small>三组人物的时间线在同一场雨夜交汇，叙事结构开始收束。</small></div><span class="xk-list-time">11 月 6 日</span></div>
+      <div class="xk-list-item"><span class="xk-list-idx">04</span><div><h4>《雾港档案》番外短片放出</h4><small>补充主线案件后续，正片已完结，适合看完正片再补。</small></div><span class="xk-list-time">11 月 6 日</span></div>
+      <div class="xk-list-item"><span class="xk-list-idx">05</span><div><h4>《第七码头》上线高清版本</h4><small>动作场面调色有调整，夜景细节比之前版本更清楚。</small></div><span class="xk-list-time">11 月 5 日</span></div>
+      <div class="xk-list-item"><span class="xk-list-idx">06</span><div><h4>《山海纪行》第二季官宣</h4><small>拍摄地将转向西部高原，预计明年春季上线首集。</small></div><span class="xk-list-time">11 月 5 日</span></div>
+      <div class="xk-list-item"><span class="xk-list-idx">07</span><div><h4>《云端旅人》导演访谈发布</h4><small>谈到云海场景的手绘比例与配乐录制方式，适合幕后爱好者。</small></div><span class="xk-list-time">11 月 4 日</span></div>
+      <div class="xk-list-item"><span class="xk-list-idx">08</span><div><h4>《夏至电台》全 16 集完结</h4><small>结局评价分化，喜欢生活流的观众满意度较高。</small></div><span class="xk-list-time">11 月 4 日</span></div>
+      <div class="xk-list-item"><span class="xk-list-idx">09</span><div><h4>《深蓝回响》新增拍摄花絮</h4><small>补充深海设备与拍摄周期说明，正片 6 集已全部上线。</small></div><span class="xk-list-time">11 月 3 日</span></div>
+      <div class="xk-list-item"><span class="xk-list-idx">10</span><div><h4>星空影院本周悬疑类型片单上线</h4><small>按推理强度与节奏快慢分组，方便按心情挑选。</small></div><span class="xk-list-time">11 月 3 日</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 分类入口 -->
+<section class="xk-sec" id="xk-cats">
+  <div class="xk-wrap">
+    <div class="xk-sec-head">
+      <h2>按类型找片：八个常用入口</h2>
+      <p>从题材出发缩小范围</p>
+    </div>
+    <div class="xk-cats">
+      <a class="xk-cat" href="/#xk-hot"><strong>科幻与奇幻</strong><small>世界观设定、视听表现与信息密度</small></a>
+      <a class="xk-cat" href="/#xk-hot"><strong>悬疑与推理</strong><small>案件结构、线索铺排与结局质量</small></a>
+      <a class="xk-cat" href="/#xk-hot"><strong>都市与情感</strong><small>生活流叙事、人物关系与台词质感</small></a>
+      <a class="xk-cat" href="/#xk-hot"><strong>古装与群像</strong><small>人物图谱、权谋线与服化道完成度</small></a>
+      <a class="xk-cat" href="/#xk-hot"><strong>动作与犯罪</strong><small>节奏强度、场面调度与观影爽感</small></a>
+      <a class="xk-cat" href="/#xk-hot"><strong>动画与合家欢</strong><small>画风、配乐与全年龄适配度</small></a>
+      <a class="xk-cat" href="/#xk-hot"><strong>纪录片与人文</strong><small>真实影像、拍摄手法与知识增量</small></a>
+      <a class="xk-cat" href="/#xk-update"><strong>更新追踪</strong><small>按更新频率与完结状态筛选</small></a>
+    </div>
+  </div>
+</section>
+
+<!-- 深度解析 -->
+<section class="xk-sec" id="xk-deep">
+  <div class="xk-wrap">
+    <div class="xk-article">
+      <h2>深度解析：在星空影院选片，先判断类型再判断节奏</h2>
+      <p>面对一个内容量很大的影视入口，最容易出现的问题是「打开很多，看完很少」。星空影院这类聚合页的价值，不在于把所有作品堆在一起，而在于帮助观众在几分钟内完成一次有效筛选。比较实用的思路是两步：先判断类型是否符合口味，再判断节奏是否匹配当下的观看状态。类型决定你会不会点开，节奏决定你能不能看完。</p>
+      <h3>类型判断：题材标签背后的真实差异</h3>
+      <p>同为悬疑，单元剧和连续剧的观看体验差别很大。单元剧每两集完成一个案件，适合碎片时间，随时暂停影响不大；连续剧则把线索压到主线里，前几集往往在铺人物关系，跳过就会看不懂。星空影院在推荐卡片里把「单元剧」「连续剧」「群像」这类标签单独标出，目的就是让观众先看清楚结构，再决定要不要投入时间。</p>
+      <p>科幻与奇幻类作品同理。有的作品把重心放在世界观搭建上，前期信息量大、节奏偏慢；有的作品以人物冒险为主线，设定只是背景板，看着更轻松。前者适合愿意做笔记、喜欢讨论设定的观众，后者更适合单纯想找一部有画面感的作品。判断标准不复杂：看简介里是否大量出现组织、年份、规则类词汇，出现得多，通常说明设定门槛更高。</p>
+      <h3>节奏体验：慢热不等于拖沓</h3>
+      <p>很多观众会把「慢热」和「拖沓」混为一谈。实际体验中，慢热作品通常在前期用细节积累情绪，进入中段后信息回报集中释放；拖沓则是反复重复同一冲突，推进感弱。区分方法很直接：看前几集是否每集都留下一个明确的新问题。如果每集都有新信息，即使节奏慢也值得继续；如果连续几集都在原地打转，就说明不适合当下状态。</p>
+      <p>动作与犯罪类作品则相反，节奏快、信息密度低，适合放松观看，但对剧情逻辑的要求可以适当放宽。星空影院在分类说明里把「爽感」和「推理强度」分开标注，就是希望观众按自己的观看目的来选择，而不是被统一的高分评价带着走。</p>
+      <h3>人物与表演：群像剧的观察方式</h3>
+      <p>古装群像与都市群像的看点常在人物关系，而不是单一主角。看这类作品时，比较有效的方法是先记住三到四个核心人物的目标，再看他们在同一件事上的不同选择。星空影院在深度解析部分会提示主要人物关系，但不做过度剧透，目的是让观众带着基本框架进入剧情，减少「脸盲期」的疲惫感。</p>
+      <p>表演层面，群像剧更看重配角是否立得住。如果配角只承担推动情节的功能，人物就会显得单薄；如果配角有自己的生活逻辑，整部作品的可信度会明显提升。这也是很多观众在评论里反复提到「配角线好看」的原因。</p>
+      <h3>适合人群与同类比较</h3>
+      <p>整体来看，星空影院覆盖的内容更适合三类观众：一是想按类型系统找片、不愿意反复试错的人；二是追更型观众，需要清楚知道更新节奏与完结状态；三是喜欢看完后找讨论、看解析的人。对于只想随便点开一部、不在意类型的观众，从热门推荐第一屏随机选一部反而更快。</p>
+      <p>与其他影视入口相比，这类页面的优势在于信息组织更完整：推荐卡片给出看点，更新列表给出动态，问答与评论给出真实反馈。搜索「星空影院」的观众，多数希望快速判断「现在有什么可看」，因此把热门与更新放在靠前位置，比长篇介绍更符合实际需求。</p>
+      <div class="xk-note">小建议：先按类型缩小到三到五部，再对照更新状态与集数决定观看顺序。追更型作品优先选已完结或更新过半的，能显著降低等待带来的体验损耗。</div>
+    </div>
+  </div>
+</section>
+
+<!-- 观影指南 -->
+<section class="xk-sec" id="xk-guide">
+  <div class="xk-wrap">
+    <div class="xk-sec-head">
+      <h2>观影与追剧指南</h2>
+      <p>把浏览路径理顺，少走弯路</p>
+    </div>
+    <div class="xk-guide">
+      <div class="xk-guide-item"><h4>先看更新状态再看评分</h4><p>评分高但刚开播的作品，后续质量仍有波动。追更型观众优先选择更新过半或已完结的内容，观看体验更完整。</p></div>
+      <div class="xk-guide-item"><h4>按观看时长选类型</h4><p>只有碎片时间时，单元剧与电影更合适；有整块时间再进入连续剧与群像剧，能更好跟上人物关系。</p></div>
+      <div class="xk-guide-item"><h4>善用分类与标签</h4><p>先锁定一个大类，再用标签排除不合口味的元素，比如避开强冲突或强悬疑，筛选效率会明显提高。</p></div>
+      <div class="xk-guide-item"><h4>移动端阅读更轻</h4><p>页面在手机上采用单列布局，卡片与列表都能顺畅滑动，适合通勤途中快速浏览更新与片单。</p></div>
+      <div class="xk-guide-item"><h4>收藏入口便于回访</h4><p>把星空影院加入收藏，隔几天回来看更新列表，比每次重新搜索更省时间，也不容易错过新内容。</p></div>
+      <div class="xk-guide-item"><h4>看评论建立预期</h4><p>评论区常能提前暴露作品的短板，比如结局仓促、配角线薄弱。带着预期观看，失望感会低很多。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="xk-sec" id="xk-faq">
+  <div class="xk-wrap">
+    <div class="xk-sec-head">
+      <h2>常见问题</h2>
+      <p>关于选片、追剧与内容判断</p>
+    </div>
+    <div class="xk-faq">
+      <details open>
+        <summary>星空影院适合什么样的观众？</summary>
+        <p>更适合希望按类型系统找片、需要清楚更新节奏的观众。如果你习惯先看简介和标签再决定是否投入时间，这类聚合页会比零散搜索更高效。对于只想随便点开一部、不在意类型的观众，直接从热门推荐第一屏挑选也可以。</p>
+      </details>
+      <details>
+        <summary>第一次来应该先看哪个模块？</summary>
+        <p>建议先看热门推荐与最新更新，快速了解当前有哪些内容在播、哪些已完结。确定大致方向后，再进入分类入口缩小范围，最后看深度解析了解类型特点。这个顺序能减少无效点击，也更容易找到符合当下心情的作品。</p>
+      </details>
+      <details>
+        <summary>慢热的剧集值得坚持看下去吗？</summary>
+        <p>判断标准是每集是否留下新问题。如果前几集持续给出新信息，即使节奏慢也通常值得继续；如果连续几集重复同一冲突、推进感弱，就说明节奏与你的观看状态不匹配，换一部更轻松的类型反而更好。</p>
+      </details>
+      <details>
+        <summary>追更型作品和已完结作品怎么选？</summary>
+        <p>追更型作品能带来讨论感，但需要等待，适合时间规律、愿意跟进的观众；已完结作品可以一次看完，情绪连贯，适合周末集中观看。如果对结局质量比较在意，优先选择已完结且评价稳定的作品。</p>
+      </details>
+      <details>
+        <summary>如何判断一部作品是否适合和家人一起看？</summary>
+        <p>可以先看类型标签与简介中的冲突强度描述。动画、自然纪录、生活流都市剧通常更适合家庭观看；犯罪、强悬疑类作品则要留意画面与题材强度。评论区也常有人提到适不适合一起看，可作为参考。</p>
+      </details>
+      <details>
+        <summary>页面内容会持续更新吗？</summary>
+        <p>热门推荐、最新更新与资讯模块会随内容动态调整，更新状态与集数信息也会同步变化。建议收藏页面，隔几天回来看一次更新列表，比每次重新搜索更省时间，也更容易发现新上线的作品。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 评论 -->
+<section class="xk-sec" id="xk-comments">
+  <div class="xk-wrap">
+    <div class="xk-sec-head">
+      <h2>观众评论</h2>
+      <p>近期 30 天内的真实讨论氛围</p>
+    </div>
+    <div class="xk-cmts">
+      <div class="xk-cmt"><div class="xk-cmt-top"><span class="xk-cmt-name">夜航船</span><span class="xk-cmt-time">11 月 7 日</span></div><p>《长夜信号》第 14 集信息量太大了，前面积累的细节终于串起来，慢热是真的慢，但回报也真的够。</p></div>
+      <div class="xk-cmt"><div class="xk-cmt-top"><span class="xk-cmt-name">南山小满</span><span class="xk-cmt-time">11 月 7 日</span></div><p>在星空影院按类型筛了一遍悬疑，比我自己乱翻效率高多了，单元剧那个标签很实用。</p></div>
+      <div class="xk-cmt"><div class="xk-cmt-top"><span class="xk-cmt-name">半糖不加冰</span><span class="xk-cmt-time">11 月 6 日</span></div><p>《轻轨以南》台词写得挺生活化，就是节奏偏慢，吃饭的时候看刚好，认真追可能会觉得不够刺激。</p></div>
+      <div class="xk-cmt"><div class="xk-cmt-top"><span class="xk-cmt-name">旧书页</span><span class="xk-cmt-time">11 月 6 日</span></div><p>《雾港档案》配角线比主线还好看，尤其是第三单元那个老警察，人物立得住。</p></div>
+      <div class="xk-cmt"><div class="xk-cmt-top"><span class="xk-cmt-name">青柠气泡</span><span class="xk-cmt-time">11 月 5 日</span></div><p>《云端旅人》画风很舒服，配乐也好，适合周末下午看，不费脑子但不幼稚。</p></div>
+      <div class="xk-cmt"><div class="xk-cmt-top"><span class="xk-cmt-name">第七个路口</span><span class="xk-cmt-time">11 月 5 日</span></div><p>《山河旧梦》前六集确实需要耐心，我差点弃了，看到中段人物动机清楚之后就好很多。</p></div>
+      <div class="xk-cmt"><div class="xk-cmt-top"><span class="xk-cmt-name">云上散步</span><span class="xk-cmt-time">11 月 4 日</span></div><p>自然纪录类推荐得不错，《山海纪行》镜头很克制，没有过度煽情，这点挺难得。</p></div>
+      <div class="xk-cmt"><div class="xk-cmt-top"><span class="xk-cmt-name">木木不困</span><span class="xk-cmt-time">11 月 4 日</span></div><p>《第七码头》剧情一般，但动作戏拍得干净，作为周末爽片完全够用，不用太较真逻辑。</p></div>
+      <div class="xk-cmt"><div class="xk-cmt-top"><span class="xk-cmt-name">橘子海</span><span class="xk-cmt-time">11 月 3 日</span></div><p>《夏至电台》结局评价好像挺分化的，我个人觉得收得还行，就是最后两集稍赶。</p></div>
+      <div class="xk-cmt"><div class="xk-cmt-top"><span class="xk-cmt-name">星野拾光</span><span class="xk-cmt-time">11 月 3 日</span></div><p>这个页面结构挺清楚的，更新列表一眼就能看到哪些剧在更，省得一个个点进去看。</p></div>
+      <div class="xk-cmt"><div class="xk-cmt-top"><span class="xk-cmt-name">慢速列车</span><span class="xk-cmt-time">11 月 2 日</span></div><p>《深蓝回响》画面是真的好，适合大屏看，手机上看有点浪费素材。</p></div>
+      <div class="xk-cmt"><div class="xk-cmt-top"><span class="xk-cmt-name">午睡星球</span><span class="xk-cmt-time">11 月 2 日</span></div><p>希望多加点老片修复的片单，新剧追不动了，反而更想重温一些经典。</p></div>
+      <div class="xk-cmt"><div class="xk-cmt-top"><span class="xk-cmt-name">一颗海盐</span><span class="xk-cmt-time">11 月 1 日</span></div><p>《长夜信号》配角演技在线，但主线解释得有点绕，希望后面别烂尾。</p></div>
+      <div class="xk-cmt"><div class="xk-cmt-top"><span class="xk-cmt-name">风里有信</span><span class="xk-cmt-time">10 月 31 日</span></div><p>分类入口做得比很多站清楚，悬疑和犯罪分开列，这点对选片很有帮助。</p></div>
+      <div class="xk-cmt"><div class="xk-cmt-top"><span class="xk-cmt-name">雨天收衣服</span><span class="xk-cmt-time">10 月 30 日</span></div><p>《山河旧梦》服化道确实用心，但权谋线有点密，得专心看，边玩手机容易跟不上。</p></div>
+      <div class="xk-cmt"><div class="xk-cmt-top"><span class="xk-cmt-name">白桃乌龙</span><span class="xk-cmt-time">10 月 29 日</span></div><p>星空影院的移动端体验不错，单列浏览很顺，通勤的时候翻更新挺方便。</p></div>
+      <div class="xk-cmt"><div class="xk-cmt-top"><span class="xk-cmt-name">深海鱼灯</span><span class="xk-cmt-time">10 月 28 日</span></div><p>纪录片板块偏少，希望多补一些历史与人文类，自然类已经挺全了。</p></div>
+      <div class="xk-cmt"><div class="xk-cmt-top"><span class="xk-cmt-name">路灯与猫</span><span class="xk-cmt-time">10 月 27 日</span></div><p>《雾港档案》结局收得比预期稳，没有强行加悬念，这点加分。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 资讯 -->
+<section class="xk-sec" id="xk-news">
+  <div class="xk-wrap">
+    <div class="xk-sec-head">
+      <h2>影视资讯与内容动态</h2>
+      <a class="xk-more" href="/#xk-update">更多动态</a>
+    </div>
+    <div class="xk-news">
+      <article class="xk-news-item">
+        <h4>年末剧集排期密集，悬疑与群像题材集中上线</h4>
+        <p>多部悬疑与古装群像作品集中在十一月上线，追更型观众需要合理分配时间，避免同时跟进过多。</p>
+        <span class="xk-news-date">11 月 7 日</span>
+      </article>
+      <article class="xk-news-item">
+        <h4>《山海纪行》第二季确定春季拍摄</h4>
+        <p>制作方公布第二季拍摄方向，将转向西部高原，首集预计明年春季上线。</p>
+        <span class="xk-news-date">11 月 5 日</span>
+      </article>
+      <article class="xk-news-item">
+        <h4>动画电影《云端旅人》幕后访谈公开</h4>
+        <p>导演谈到云海场景的手绘比例与配乐录制方式，对幕后制作感兴趣的观众可以关注。</p>
+        <span class="xk-news-date">11 月 4 日</span>
+      </article>
+      <article class="xk-news-item">
+        <h4>《雾港档案》番外短片上线，补充主线后续</h4>
+        <p>正片完结后补充案件后续，建议看完正片再观看，否则部分人物关系会看不明白。</p>
+        <span class="xk-news-date">11 月 6 日</span>
+      </article>
+      <article class="xk-news-item">
+        <h4>星空影院更新悬疑类型片单分组规则</h4>
+        <p>按推理强度与节奏快慢重新分组，方便观众根据观看状态快速选择。</p>
+        <span class="xk-news-date">11 月 3 日</span>
+      </article>
+      <article class="xk-news-item">
+        <h4>《夏至电台》完结后讨论持续，结局评价分化</h4>
+        <p>喜欢生活流叙事的观众满意度较高，也有观众认为最后两集节奏偏赶。</p>
+        <span class="xk-news-date">11 月 4 日</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="xk-footer">
+  <div class="xk-wrap">
+    <div class="xk-foot-grid">
+      <div>
+        <h5>星空影院</h5>
+        <p class="xk-foot-desc">一个偏内容消费的观影参考页，围绕高清影视资源、热门剧集与类型片单整理选片思路，帮助观众更快找到合适的内容。</p>
+      </div>
+      <div>
+        <h5>热门栏目</h5>
+        <a href="/#xk-hot">热门推荐</a>
+        <a href="/#xk-update">最新更新</a>
+        <a href="/#xk-cats">片单分类</a>
+        <a href="/#xk-deep">深度解析</a>
+      </div>
+      <div>
+        <h5>帮助与答疑</h5>
+        <a href="/#xk-guide">观影指南</a>
+        <a href="/#xk-faq">常见问题</a>
+        <a href="/#xk-comments">观众评论</a>
+        <a href="/#xk-news">资讯动态</a>
+      </div>
+      <div>
+        <h5>友情链接</h5>
+        <a href="/#xk-top">星空影院首页</a>
+        <a href="/#xk-intro">内容简介</a>
+        <a href="/#xk-faq">选片答疑</a>
+        <a href="/#xk-top">返回顶部</a>
+      </div>
+    </div>
+    <div class="xk-copy">
+      <span>© 2026 星空影院 · 内容整理与观影参考</span>
+      <span>免责声明：本页为内容聚合与观影参考页面，所有作品信息与更新状态以实际发布为准。</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+        </html>
